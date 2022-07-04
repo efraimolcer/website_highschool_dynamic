@@ -1,0 +1,164 @@
+/* Variables and whole page style */
+:root { --demerred: #BF0404;
+		--demerblue: #0511F2;
+		--demerturkuois: #05DBF2;
+		--lightturkuois : #b4f4fb;
+		--verylightturkuois: #e6fbfd; 
+}
+
+body { background-color: var(--verylightturkuois);
+	   font-family: sans-serif;
+	   margin: 0;
+}	   
+
+/* Select which page shown*/
+body > article { display:none;
+}
+
+.main { display: block;
+}
+
+:target ~ article { display: none;
+}
+	 
+#main:target ~ .main,
+#about:target ~ .about,
+#education:target ~ .education,
+#news:target ~ .news,
+#teachers:target ~ .teachers { display: block;
+}
+
+/* Stylize navigation bar with logo image */
+nav { background-color: black;
+	  position: fixed;
+	  width: 100%;
+	  padding: 5px 5px 5px 5px;
+	  list-style-type: none;
+}
+
+a.navButton { float: left;
+		      color: white;
+		      text-decoration: none;
+		      padding: 5px 10px 5px 10px;
+		      font-size: 15px;
+		      font-weight: bold;
+		      border-left: solid;
+		      border-width: 3px;
+		      transition: 0.3s;
+}
+
+a.navButton:hover { background-color: var(--demerturkuois);  
+					color: black;
+}
+
+nav img { float: left;
+		  height: 30px;
+		  width: 20px;
+		  padding: 0px 10px 0px 7px;
+		  border: 0;
+}
+  
+/* Stylize general text elements */
+h2 { text-align: center;
+}
+
+h2 span { color: var(--demerred);
+		  background-color: var(--demerturkuois);
+		  font-size: 30px;
+		  padding: 5px 10px 5px 10px;
+}
+
+h3 { color: var(--demerred); 
+	 background-color: var(--lightturkuois);
+	 padding: 5px 0 5px 10px;
+}
+				   
+p { margin: 10px 10px 5px 20px;
+}
+
+ol { line-height: 200%
+}
+
+/* Stylize all photos*/
+figure { text-align: center;
+		 font-size: 10px;
+}
+		 
+figure img { border: 3px solid black;
+			 width: 50%;
+			 display: block;
+			 margin: 0 auto;
+}
+
+figcaption a { text-decoration: none;
+			   background-color: black;			   
+			   color: white;
+}
+
+/* Stylize table*/	
+table { width: 50%;
+		table-layout: fixed;
+		border-collapse: collapse;
+		margin: 10px 0 30px 30px;
+		text-align: center;
+}
+
+th { background-color: var(--demerred);
+	 color: white;
+	 border: 1px solid black;
+}
+
+th:nth-child(1) { width:40%;
+}
+
+th:nth-child(2) { width:40%;
+}
+
+th:nth-child(3) { width:20%;
+}
+		      
+td { background-color: lightgray;
+	 color: black; 
+	 border: 1px solid black;
+}
+
+/* Stylize input elements*/	
+.inputContent { display: none;
+			    margin: 0 25px 0 25px;
+			    padding: 0 20px 20px 20px;
+			    border: 5px solid gray;
+			    text-align: center;
+			    font-weight: bold;
+}
+
+input {margin-right: 15px;
+}
+
+select {margin-right: 15px;
+}
+
+/* Stylize buttons*/
+div button { margin-left: 25px;
+			 padding: 5px 20px 5px 20px;
+			 border: 4px outset black;
+			 background-color: lightgray;
+			 cursor: pointer;
+			 transition: 0.25s; 
+}
+
+div button:hover { background-color: var(--demerturkuois);
+				   color: white;
+}
+
+/* Stylize footer */
+footer { background-color: black;
+		 color: white;	
+		 text-align: left;
+		 font-size: 12px;
+		 padding: 1px 0 1px 0;
+}
+		 
+footer a { margin-left: 5px;
+		   text-decoration: none;
+		   color: white;
+}
